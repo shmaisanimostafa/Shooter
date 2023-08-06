@@ -2,9 +2,3 @@ res://scenes/levels/outside.tscn
 res://scenes/levels/house.tres
 res://scenes/enemies/drone.gdshader
 res://scenes/levels/inside.tscn
-res://scenes/music.tscn
-res://scenes/container/box.tscn
-res://scenes/items/item.tscn
-res://scenes/container/item_container.tscn
-res://scenes/enemies/bug.gd
-res://scenes/enemies/bug.tscn
