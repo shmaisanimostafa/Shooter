@@ -24,8 +24,6 @@ func _process(delta):
 		if active :
 			move_and_slide()
 			look_at(Globals.player_pos)
-		if player_nearby:
-			pass
 
 func _on_attack_area_2d_body_entered(_body):
 	player_nearby = true
@@ -40,7 +38,7 @@ func _on_notice_area_2d_body_entered(_body):
 
 func _on_notice_area_2d_body_exited(_body):
 	active = false
-	$AnimatableBody2D.stop()
+	
 	$Timers/AttackTimer.start()
 
 func _on_animated_sprite_2d_animation_finished():

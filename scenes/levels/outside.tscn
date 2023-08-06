@@ -26,31 +26,81 @@ resource_name = "Walls"
 texture = ExtResource("9_t6u8d")
 texture_region_size = Vector2i(390, 390)
 0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(51, -65, -68, -68, -66, 66, 48, 61, 182.5, 64, 182.5, -56)
 1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-182.5, -65, 182.5, -59.5, 182.5, 62, -182.5, 59.5)
 2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-182.5, -60, 60, -66, 66, 62, -182.5, 56)
 0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-60, -64, 60, -66, 60, 182.5, -58, 182.5)
 1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(182.5, -56, 182.5, 58, 60, 60, 60, 182.5, -60, 182.5, -60, -64)
 2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-182.5, -58, -182.5, 56, -62, 64, -62, 182.5, 56, 182.5, 54, 60, 60, -60)
 0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-61, -182.5, 59.5, -182.5, 58, 182.5, -61, 182.5)
 1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-59.5, -182.5, 59.5, -182.5, 61, -62, 182.5, -61, 182.5, 58, -61, 59.5)
 2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-58, -182.5, 54, -182.5, 58, 52, -182.5, 56, -182.5, -58, -64, -64)
 0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-58, -182.5, 62, -182.5, 62, 42, -60, 44)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d4el2"]
 texture = ExtResource("10_05inq")
 texture_region_size = Vector2i(365, 365)
 0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
 1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
 2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
 0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
 1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
 2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
 0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
 1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
 2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_q3p01"]
 tile_size = Vector2i(365, 365)
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 11
 sources/0 = SubResource("TileSetAtlasSource_gagh5")
 sources/5 = SubResource("TileSetAtlasSource_d4el2")
 
@@ -64,9 +114,9 @@ point_count = 8
 size = Vector2(16065, 664.5)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_bssnu"]
-vertices = PackedVector2Array(5402, 2755, 4169, 2676, 3852, 2223, 4529, 1874, 5527, 2121, 5776, 2597, 5821, 4361, 5436, 4882, 2936, -4339, 6884, -4384, 6896, -2902, 3603, -2857, 3264, -2778, 2891, 2201, 3253, 1646, 3377, 1895, 3631, 2310, 3762, 1850, 5074, 1601, 5040, -1748, 3739, -2087, 4248, -2449, 6839, -2472, 5447, -1816, 6952, 4780, 6194, 1612, -1587, 4937, -1587, 3006, 4893, 2970, 5097, 4690, 5436, 1533, 6205, 4350, -2553, 3457, -5118, 3489, -2117, 443, -2114, 1076, -8495, -1432, -4965, -1400, -7537, 1210, -8532, 4958, -7580, 3495, -7585, 3638, -5344, 3472, -1733, 4948, -2732, 3726, -1754, 2760, -1587, 2760, 2901, 1063, 2896, 2142, -649, 2685, 3719, 2510, 3734, 2751, -632, 3006)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(0, 5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(8, 11, 12), PackedInt32Array(13, 8, 12, 14), PackedInt32Array(13, 14, 15), PackedInt32Array(16, 13, 15, 17), PackedInt32Array(18, 16, 17), PackedInt32Array(19, 18, 17, 20, 21), PackedInt32Array(19, 21, 22, 23), PackedInt32Array(23, 22, 24, 25), PackedInt32Array(26, 27, 28, 29), PackedInt32Array(24, 26, 29), PackedInt32Array(25, 30, 23), PackedInt32Array(31, 25, 24), PackedInt32Array(31, 24, 29, 6), PackedInt32Array(6, 29, 7), PackedInt32Array(32, 33, 34, 35), PackedInt32Array(36, 37, 38), PackedInt32Array(39, 36, 38, 40, 41), PackedInt32Array(38, 42, 40), PackedInt32Array(43, 39, 41, 44), PackedInt32Array(45, 43, 44, 32), PackedInt32Array(45, 32, 35), PackedInt32Array(46, 45, 35, 47, 48, 49), PackedInt32Array(50, 51, 49, 48), PackedInt32Array(49, 52, 27, 46)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(7010, -4374, 7024, -2728, 3356, -2723, 3253, 1646, 3377, 1895, 3762, 1850, 3556, -2152, 4460, -2557, 7005, -2557, 6952, 4780, -1587, 4937, -1587, 3006, 4893, 2970, 5097, 4690, 5436, 4882, 5342, 2757, 4169, 2676, 3626, 2300, 4210, 1721, 5427, 1822, 5652, 2127, 5926, 2237, 5821, 4361, 6205, 4350, 6080, 1663, 5357, 1653, 5342, -1620, 5190, -1608, 5185, 1663, 3719, 2507, 2891, 2201, 2927, -3110, -3337, -3110, -3337, -4375), PackedVector2Array(-1754, 2760, -1733, 4948, -8532, 4958, -8495, -1432, -4965, -1400, -7537, 1210, -5344, 3472, -7580, 3495, -7585, 3638, -2732, 3726, -2553, 3457, -5118, 3489, -2117, 443, -2114, 1076, 2901, 1063, 2896, 2142, 3719, 2510, 3734, 2751, -649, 2685, -632, 3006, -1587, 3006, -1587, 2760), PackedVector2Array(-8484, -4375, -8474, -1645, -7986.76, -1647.22, -6495, -1654, -6514, -4194, -6286, -4166, -6334, -1435, -5040, -1483, -3365, -3119, -3670, -3728, -3499, -3871, -3384, -3738, -3384, -3567, -3470, -3500, -3299, -3072, 2936, -3101, 2916, -4328, -4020, -4356)])
+vertices = PackedVector2Array(-9371, -1968, -9376, -4762, -7308, -4754, -7701, -2603, -7803, -2560, -7308, -2522, -7609, -2522, -7810, -2461, -7308, -1968, -7745, -2405, -7663, -2406, -7615, -2522, -7307, -2529, -6443, 3852, -6572, 3799, -6596, 3298, -2595, 3310, -2573, 4552, -6474, 4010, -9338, 4589, -6607, 4015, -6683, 3922, -9358, 3298, -6569, 3802, -6589, 3298, -3323, -4741, -3291, -2649, -4142, -3477, -4235, -3987, -8359, 863, -6132, 3129, -8409, 3114, -4362, -4135, -4377, -4745, -4265, -4101, -9342, 3292, -9371, -1967, -8776, -1966, -8776, -1828, -8420, 3298, -7168, -1819, -4347, -3915, -7166, -4521, -4426, -3970, -7308, -4521, -7307, -4755, -4443, -4084, -4358, -4131, -4373, -4745, -3309, -3442, -3317, -4746, 6187, -4734, 1975, -3434, 6187, -3062, 2535, -3078, 1979, -2894, 2519, -2890, 5801, 917, 5266, 1292, 4522, 1302, 4542, -2905, 6172, -2929, 5858, 826, 5971, 1015, 6017, 952, 6182, 949, 6182, 4599, 5240, 4589, 5849, 1009, 5992, 841, 6185, 950, 6015, 953, 2868, -2762, 2702, -2737, 2703, -2903, 2917, -2836, 4550, -2905, 3057, -2826, 3092, -2736, 4543, -2001, 4342, -1989, 2890, 2218, 2715, 2404, 3051, -2637, 2918, 2138, 5075, 4028, 5250, 4019, 5250, 4599, 4514, 4595, 5058, 1907, 4514, 2391, 4802, 1703, 2957, 2408, 2960, 2325, 3046, 2307, 3105, 2238, 4333, 1475, 4610, 1479, 2958, 2325, 2953, 2406, 2910, 2273, 2700, -2734, 2860, -2749, 2883, -2673, 2945, -2620, 2985, 2118, 3078, 2128)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(2, 5, 6, 3), PackedInt32Array(0, 4, 7), PackedInt32Array(8, 0, 7, 9), PackedInt32Array(8, 9, 10), PackedInt32Array(8, 10, 11, 12), PackedInt32Array(13, 14, 15, 16, 17), PackedInt32Array(18, 13, 17), PackedInt32Array(18, 17, 19, 20), PackedInt32Array(21, 20, 19, 22), PackedInt32Array(23, 21, 22, 24), PackedInt32Array(25, 26, 27, 28), PackedInt32Array(29, 30, 31), PackedInt32Array(32, 33, 25, 34), PackedInt32Array(35, 36, 37, 38), PackedInt32Array(31, 39, 35, 38, 29), PackedInt32Array(29, 38, 40), PackedInt32Array(27, 29, 40), PackedInt32Array(41, 27, 40, 42, 43), PackedInt32Array(42, 44, 45), PackedInt32Array(28, 34, 25), PackedInt32Array(41, 28, 27), PackedInt32Array(46, 43, 42, 45), PackedInt32Array(47, 46, 45, 48), PackedInt32Array(49, 50, 51, 52), PackedInt32Array(52, 51, 53, 54), PackedInt32Array(55, 52, 54, 56), PackedInt32Array(57, 58, 59, 60, 61, 62), PackedInt32Array(63, 64, 65, 66, 67), PackedInt32Array(63, 67, 58, 68), PackedInt32Array(57, 68, 58), PackedInt32Array(69, 62, 61), PackedInt32Array(69, 61, 70, 71), PackedInt32Array(72, 73, 74, 75), PackedInt32Array(75, 74, 76, 77), PackedInt32Array(78, 77, 76, 79, 80), PackedInt32Array(81, 82, 83, 78, 80, 84), PackedInt32Array(85, 86, 87, 88), PackedInt32Array(89, 85, 88, 90, 91), PackedInt32Array(90, 92, 93, 94), PackedInt32Array(91, 90, 94, 95, 96, 97), PackedInt32Array(98, 99, 82, 100), PackedInt32Array(82, 101, 102, 103), PackedInt32Array(82, 103, 104), PackedInt32Array(82, 104, 83), PackedInt32Array(81, 100, 82), PackedInt32Array(84, 80, 96, 105), PackedInt32Array(106, 105, 96), PackedInt32Array(95, 106, 96)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-9376, -4762, -9371, -1968, -7308, -1968, -7307, -2529, -7615, -2522, -7663, -2406, -7745, -2405, -7810, -2461, -7803, -2560, -7701, -2603, -7609, -2522, -7308, -2522, -7308, -4754), PackedVector2Array(-9358, 3298, -9338, 4589, -2573, 4552, -2595, 3310, -6596, 3298, -6572, 3799, -6443, 3852, -6474, 4010, -6607, 4015, -6683, 3922, -6569, 3802, -6589, 3298, -8450, 3324), PackedVector2Array(-3343, -3041, -3323, -4741, -4377, -4745, -4362, -4135, -4265, -4101, -4235, -3987, -4347, -3915, -4426, -3970, -4443, -4084, -4358, -4131, -4373, -4745, -7307, -4755, -7308, -4521, -7166, -4521, -7168, -1819, -8776, -1828, -8776, -1966, -9371, -1967, -9342, 3292, -8477, 3297, -8450, 3115, -6235, 3106, -8765, 299, -4522, -4030), PackedVector2Array(-3317, -4746, -3309, -3442, 1975, -3434, 1979, -2894, 2519, -2890, 2535, -3078, 6187, -3062, 6187, -4734), PackedVector2Array(4542, -2905, 6172, -2929, 6185, 950, 6015, 953, 5992, 841, 5858, 826, 5801, 917, 5849, 1009, 5971, 1015, 6017, 952, 6182, 949, 6182, 4599, 5240, 4589, 5266, 1292, 4522, 1302), PackedVector2Array(4342, -1989, 4543, -2001, 4550, -2905, 2701, -2910, 2702, -2737, 2868, -2762, 2917, -2836, 3057, -2826, 3092, -2736, 3051, -2637, 2945, -2620, 2883, -2673, 2860, -2749, 2700, -2734, 2715, 2404, 2953, 2406, 2958, 2325, 2910, 2273, 2890, 2218, 2918, 2138, 2985, 2118, 3078, 2128, 3105, 2238, 3046, 2307, 2960, 2325, 2957, 2408, 4514, 2391, 4514, 4595, 5250, 4599, 5250, 4019, 5075, 4028, 5058, 1907, 4802, 1703, 4610, 1479, 4333, 1475)])
 
 [node name="Outside" instance=ExtResource("1_mcw5h")]
 script = ExtResource("2_iv2ye")
@@ -282,6 +332,7 @@ texture = ExtResource("8_ja45p")
 
 [node name="TileMap" parent="Ground" index="34"]
 tile_set = SubResource("TileSet_q3p01")
+collision_animatable = true
 layer_0/name = "Soil"
 layer_0/tile_data = PackedInt32Array(65540, 65541, 1, 131075, 5, 1, 131076, 65541, 2, 131077, 65541, 1, 3, 5, 0, 65539, 5, 1, 65541, 65541, 1, 5, 65541, 1, -196604, 65541, 2, -196605, 65541, 2, -196606, 65541, 2, -196603, 65541, 2, -196607, 5, 2, -262143, 5, 1, -327679, 5, 1, -393215, 5, 1, -458751, 5, 0, -458750, 65541, 0, -458749, 65541, 0, -458748, 65541, 0, -458747, 65541, 0, -458746, 65541, 0, -458745, 65541, 0, -458744, 65541, 0, -458743, 65541, 0, -458742, 65541, 0, -458741, 65541, 0, -458740, 65541, 0, -458739, 131077, 0, -393203, 131077, 1, -327667, 131077, 1, -262131, 131077, 1, -196595, 131077, 1, -131059, 131077, 1, -65523, 131077, 1, -65524, 131077, 1, 12, 131077, 1, 65548, 131077, 1, 65549, 131077, 1, 13, 131077, 1, 131085, 131077, 1, 196621, 131077, 2, 196620, 65541, 2, 196619, 65541, 2, 196618, 65541, 2, 196617, 65541, 2, 196616, 65541, 2, 196615, 65541, 2, 196614, 65541, 2, 196613, 65541, 2, 196612, 65541, 2, 196611, 5, 2, -131067, 5, 1, -65531, 5, 1, -65527, 65541, 1, -131063, 65541, 1, -196599, 65541, 1, -262135, 65541, 1, -327671, 65541, 1, -393207, 65541, 1, -393208, 65541, 1, -393209, 65541, 1, -393210, 65541, 1, -393211, 65541, 1, -393212, 65541, 1, -393213, 65541, 1, -393214, 65541, 1, -327678, 65541, 1, -262142, 65541, 1, -262141, 65541, 1, -327677, 65541, 1, -327676, 65541, 1, -262140, 65541, 1, -262139, 65541, 1, -327675, 65541, 1, -327674, 65541, 1, -262138, 65541, 1, -196602, 65541, 1, -131066, 65541, 1, -65530, 65541, 1, 6, 65541, 1, 65542, 65541, 1, 131078, 65541, 1, 131079, 65541, 1, 65543, 65541, 1, 7, 65541, 1, -65529, 65541, 1, -131065, 65541, 1, -196601, 65541, 1, -262137, 65541, 1, -327673, 65541, 1, -327672, 65541, 1, -262136, 65541, 1, -196600, 65541, 1, -131064, 65541, 1, -65528, 65541, 1, 8, 65541, 1, 65544, 65541, 1, 131080, 65541, 1, 131081, 65541, 1, 65545, 65541, 1, 9, 65541, 1, 10, 65541, 1, -65526, 65541, 1, -131062, 65541, 1, -196598, 65541, 1, -262134, 65541, 1, -327670, 65541, 1, -393206, 65541, 1, -393205, 65541, 1, -327669, 65541, 1, -262133, 65541, 1, -196597, 65541, 1, -131061, 65541, 1, -65525, 65541, 1, 11, 65541, 1, 65547, 65541, 1, 65546, 65541, 1, 131082, 65541, 1, 131083, 65541, 1, 131084, 65541, 1, -131060, 65541, 1, -196596, 65541, 1, -262132, 65541, 1, -327668, 65541, 1, -393204, 65541, 1, 4, 65541, 0)
 layer_1/name = "Walls"
@@ -326,9 +377,8 @@ position = Vector2(4942, 2474)
 position = Vector2(-2398, -3774)
 
 [node name="House" parent="." index="2" instance=ExtResource("14_j0vma")]
-position = Vector2(-5189, 919)
+position = Vector2(-5573, 344)
 rotation = -0.794125
-metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
 [node name="Gate" parent="." index="4" instance=ExtResource("2_7ymba")]
@@ -348,7 +398,7 @@ script = null
 position = Vector2(950, 1126)
 
 [node name="Hunter" parent="Enemies" index="3" instance=ExtResource("18_uywi4")]
-position = Vector2(1531, 1483)
+position = Vector2(4283, 2291)
 
 [node name="CarPath" type="Path2D" parent="." index="11"]
 curve = SubResource("Curve2D_nmw4d")
@@ -393,7 +443,9 @@ position = Vector2(5747, 1994)
 rotation = 0.765534
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="16"]
+position = Vector2(830, 358)
 navigation_polygon = SubResource("NavigationPolygon_bssnu")
+metadata/_edit_lock_ = true
 
 [connection signal="player_entered" from="House" to="." method="_on_house_player_entered"]
 [connection signal="player_exited" from="House" to="." method="_on_house_player_exited"]

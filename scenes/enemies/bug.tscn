@@ -206,7 +206,8 @@ position = Vector2(2.5, -3)
 rotation = 1.5708
 scale = Vector2(0.07, 0.07)
 sprite_frames = SubResource("SpriteFrames_r1ym2")
-animation = &"Attack"
+animation = &"Walk"
+frame_progress = 0.749977
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, -1)
