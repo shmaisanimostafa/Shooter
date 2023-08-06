@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bejxa6tspnvao"]
+
+[ext_resource type="Script" path="res://scenes/container/container.gd" id="1_7c67v"]
+[ext_resource type="AudioStream" uid="uid://dvuwqyd3yupp" path="res://audio/container_hit.mp3" id="2_gqi7p"]
+
+[node name="ItemContainer" type="StaticBody2D" groups=["Container"]]
+collision_layer = 4
+collision_mask = 11
+script = ExtResource("1_7c67v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+
+[node name="BaseSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 1.5)
+scale = Vector2(1, 0.988372)
+
+[node name="LidSprite" type="Sprite2D" parent="."]
+
+[node name="SpawnPositions" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_gqi7p")

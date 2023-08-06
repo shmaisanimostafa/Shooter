@@ -1,0 +1,400 @@
+[gd_scene load_steps=27 format=3 uid="uid://b82wdbngvdujs"]
+
+[ext_resource type="PackedScene" uid="uid://drl4stwc13lfl" path="res://scenes/levels/level.tscn" id="1_mcw5h"]
+[ext_resource type="PackedScene" uid="uid://dtkghhrnlofqb" path="res://scenes/objects/gate.tscn" id="2_7ymba"]
+[ext_resource type="Script" path="res://scenes/levels/outside.gd" id="2_iv2ye"]
+[ext_resource type="Texture2D" uid="uid://dpdd1m54ax41" path="res://graphics/ground/stones.png" id="2_te3iv"]
+[ext_resource type="Texture2D" uid="uid://bb6xcpuxt0rxf" path="res://graphics/decals/dirt_patch.png" id="3_nyhua"]
+[ext_resource type="Texture2D" uid="uid://bd37kxijxntbj" path="res://graphics/decals/moss/moss_1.png" id="4_bbadh"]
+[ext_resource type="Texture2D" uid="uid://dsq2g442kibl5" path="res://graphics/decals/moss/moss_2.png" id="5_23vsf"]
+[ext_resource type="Texture2D" uid="uid://df0r8a0o73vcb" path="res://graphics/decals/moss/moss_3.png" id="6_s8ugt"]
+[ext_resource type="Texture2D" uid="uid://phhsl8fapsv4" path="res://graphics/decals/moss/moss_4.png" id="7_l4djq"]
+[ext_resource type="Texture2D" uid="uid://n3sonmw87a62" path="res://graphics/decals/moss/moss_5.png" id="8_ja45p"]
+[ext_resource type="Texture2D" uid="uid://b1u56bf8mm1n1" path="res://graphics/tilesets/outside_walls.png" id="9_t6u8d"]
+[ext_resource type="Texture2D" uid="uid://kvl3puoic8ep" path="res://graphics/tilesets/soil.png" id="10_05inq"]
+[ext_resource type="PackedScene" uid="uid://8piv7ee54r2s" path="res://scenes/objects/steam_vent.tscn" id="12_xqcwd"]
+[ext_resource type="PackedScene" uid="uid://doinb8khk5dbv" path="res://scenes/enemies/scout.tscn" id="14_50nlp"]
+[ext_resource type="PackedScene" uid="uid://br671s6dbmdfu" path="res://scenes/houses/house.tscn" id="14_j0vma"]
+[ext_resource type="PackedScene" uid="uid://cysd14ce8fg8i" path="res://scenes/enemies/bug.tscn" id="15_fi21m"]
+[ext_resource type="PackedScene" uid="uid://b1c7ap0tsulvy" path="res://scenes/enemies/drone.tscn" id="16_5wssw"]
+[ext_resource type="PackedScene" uid="uid://han13f0vhrbr" path="res://scenes/enemies/car.tscn" id="17_wi3x1"]
+[ext_resource type="PackedScene" uid="uid://dwwvgogdnk50a" path="res://scenes/container/box.tscn" id="18_sipbj"]
+[ext_resource type="PackedScene" uid="uid://t2qfisw2g7gk" path="res://scenes/enemies/hunter.tscn" id="18_uywi4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gagh5"]
+resource_name = "Walls"
+texture = ExtResource("9_t6u8d")
+texture_region_size = Vector2i(390, 390)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d4el2"]
+texture = ExtResource("10_05inq")
+texture_region_size = Vector2i(365, 365)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_q3p01"]
+tile_size = Vector2i(365, 365)
+sources/0 = SubResource("TileSetAtlasSource_gagh5")
+sources/5 = SubResource("TileSetAtlasSource_d4el2")
+
+[sub_resource type="Curve2D" id="Curve2D_nmw4d"]
+_data = {
+"points": PackedVector2Array(-1921.66, -700.416, 1921.66, 700.416, 1324, -2026, 844.091, -664.497, -844.091, 664.497, 2887, 1472, 772.254, -53.8782, -772.254, 53.8782, -2914, 3789, 395.107, 305.31, -395.107, -305.31, -7414, 3833, 466.944, -754.294, -466.944, 754.294, -7770, 98, -538.782, 71.8376, 538.782, -71.8376, -3508, -3451, -589.267, -139.696, 589.267, 139.696, -1512, -3152, -35.9188, -736.335, 35.9188, 736.335, 1324, -2026)
+}
+point_count = 8
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hiqsp"]
+size = Vector2(16065, 664.5)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_bssnu"]
+vertices = PackedVector2Array(5402, 2755, 4169, 2676, 3852, 2223, 4529, 1874, 5527, 2121, 5776, 2597, 5821, 4361, 5436, 4882, 2936, -4339, 6884, -4384, 6896, -2902, 3603, -2857, 3264, -2778, 2891, 2201, 3253, 1646, 3377, 1895, 3631, 2310, 3762, 1850, 5074, 1601, 5040, -1748, 3739, -2087, 4248, -2449, 6839, -2472, 5447, -1816, 6952, 4780, 6194, 1612, -1587, 4937, -1587, 3006, 4893, 2970, 5097, 4690, 5436, 1533, 6205, 4350, -2553, 3457, -5118, 3489, -2117, 443, -2114, 1076, -8495, -1432, -4965, -1400, -7537, 1210, -8532, 4958, -7580, 3495, -7585, 3638, -5344, 3472, -1733, 4948, -2732, 3726, -1754, 2760, -1587, 2760, 2901, 1063, 2896, 2142, -649, 2685, 3719, 2510, 3734, 2751, -632, 3006)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(0, 5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(8, 11, 12), PackedInt32Array(13, 8, 12, 14), PackedInt32Array(13, 14, 15), PackedInt32Array(16, 13, 15, 17), PackedInt32Array(18, 16, 17), PackedInt32Array(19, 18, 17, 20, 21), PackedInt32Array(19, 21, 22, 23), PackedInt32Array(23, 22, 24, 25), PackedInt32Array(26, 27, 28, 29), PackedInt32Array(24, 26, 29), PackedInt32Array(25, 30, 23), PackedInt32Array(31, 25, 24), PackedInt32Array(31, 24, 29, 6), PackedInt32Array(6, 29, 7), PackedInt32Array(32, 33, 34, 35), PackedInt32Array(36, 37, 38), PackedInt32Array(39, 36, 38, 40, 41), PackedInt32Array(38, 42, 40), PackedInt32Array(43, 39, 41, 44), PackedInt32Array(45, 43, 44, 32), PackedInt32Array(45, 32, 35), PackedInt32Array(46, 45, 35, 47, 48, 49), PackedInt32Array(50, 51, 49, 48), PackedInt32Array(49, 52, 27, 46)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(7010, -4374, 7024, -2728, 3356, -2723, 3253, 1646, 3377, 1895, 3762, 1850, 3556, -2152, 4460, -2557, 7005, -2557, 6952, 4780, -1587, 4937, -1587, 3006, 4893, 2970, 5097, 4690, 5436, 4882, 5342, 2757, 4169, 2676, 3626, 2300, 4210, 1721, 5427, 1822, 5652, 2127, 5926, 2237, 5821, 4361, 6205, 4350, 6080, 1663, 5357, 1653, 5342, -1620, 5190, -1608, 5185, 1663, 3719, 2507, 2891, 2201, 2927, -3110, -3337, -3110, -3337, -4375), PackedVector2Array(-1754, 2760, -1733, 4948, -8532, 4958, -8495, -1432, -4965, -1400, -7537, 1210, -5344, 3472, -7580, 3495, -7585, 3638, -2732, 3726, -2553, 3457, -5118, 3489, -2117, 443, -2114, 1076, 2901, 1063, 2896, 2142, 3719, 2510, 3734, 2751, -649, 2685, -632, 3006, -1587, 3006, -1587, 2760), PackedVector2Array(-8484, -4375, -8474, -1645, -7986.76, -1647.22, -6495, -1654, -6514, -4194, -6286, -4166, -6334, -1435, -5040, -1483, -3365, -3119, -3670, -3728, -3499, -3871, -3384, -3738, -3384, -3567, -3470, -3500, -3299, -3072, 2936, -3101, 2916, -4328, -4020, -4356)])
+
+[node name="Outside" instance=ExtResource("1_mcw5h")]
+script = ExtResource("2_iv2ye")
+
+[node name="Decals" parent="." index="0"]
+metadata/_edit_lock_ = true
+
+[node name="Ground" parent="." index="1"]
+position = Vector2(-1119, 102)
+metadata/_edit_group_ = true
+
+[node name="Soil" type="Sprite2D" parent="Ground" index="0"]
+texture_repeat = 2
+position = Vector2(342, 93)
+texture = ExtResource("2_te3iv")
+region_enabled = true
+region_rect = Rect2(-3158.47, -648.665, 16000, 10000)
+
+[node name="Decoration" type="Sprite2D" parent="Ground" index="1"]
+modulate = Color(0.988235, 1, 1, 1)
+position = Vector2(-390, 603)
+scale = Vector2(0.377516, 0.398927)
+texture = ExtResource("3_nyhua")
+
+[node name="Decoration2" type="Sprite2D" parent="Ground" index="2"]
+modulate = Color(0.988235, 1, 1, 1)
+position = Vector2(4908, -2422)
+scale = Vector2(3.89786, 4.11893)
+texture = ExtResource("3_nyhua")
+
+[node name="Decoration3" type="Sprite2D" parent="Ground" index="3"]
+modulate = Color(0.988235, 1, 1, 1)
+position = Vector2(5596, 298)
+rotation = 1.5705
+scale = Vector2(3.89786, 4.11893)
+texture = ExtResource("3_nyhua")
+
+[node name="Decoration4" type="Sprite2D" parent="Ground" index="4"]
+modulate = Color(0.988235, 1, 1, 1)
+position = Vector2(3212, 1626)
+rotation = 1.5705
+scale = Vector2(3.89786, 4.11893)
+texture = ExtResource("3_nyhua")
+
+[node name="Decoration5" type="Sprite2D" parent="Ground" index="5"]
+modulate = Color(0.988235, 1, 1, 1)
+position = Vector2(-6405, -3578)
+rotation = 1.5705
+scale = Vector2(3.89786, 4.11893)
+texture = ExtResource("3_nyhua")
+
+[node name="Moss1" type="Sprite2D" parent="Ground" index="6"]
+position = Vector2(1395.26, 211.5)
+scale = Vector2(0.556472, 0.622302)
+texture = ExtResource("4_bbadh")
+
+[node name="Moss2" type="Sprite2D" parent="Ground" index="7"]
+position = Vector2(-867, -44)
+scale = Vector2(0.708134, 0.713615)
+texture = ExtResource("5_23vsf")
+
+[node name="Moss3" type="Sprite2D" parent="Ground" index="8"]
+position = Vector2(1387, 692)
+scale = Vector2(0.814815, 0.852941)
+texture = ExtResource("6_s8ugt")
+
+[node name="Moss4" type="Sprite2D" parent="Ground" index="9"]
+position = Vector2(-39, 361)
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss7" type="Sprite2D" parent="Ground" index="10"]
+position = Vector2(-1538, 1758)
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss8" type="Sprite2D" parent="Ground" index="11"]
+position = Vector2(-268, 2304)
+rotation = 1.21626
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss9" type="Sprite2D" parent="Ground" index="12"]
+position = Vector2(4621, 2266)
+rotation = 1.21626
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss10" type="Sprite2D" parent="Ground" index="13"]
+position = Vector2(-2326, -3481)
+rotation = 1.21626
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss11" type="Sprite2D" parent="Ground" index="14"]
+position = Vector2(7834, -3956)
+rotation = 1.21626
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss12" type="Sprite2D" parent="Ground" index="15"]
+position = Vector2(-6150, 4394)
+rotation = 1.21626
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss13" type="Sprite2D" parent="Ground" index="16"]
+position = Vector2(7947, 4485)
+rotation = 1.21626
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss14" type="Sprite2D" parent="Ground" index="17"]
+position = Vector2(-1851, 2652)
+rotation = -0.999089
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss15" type="Sprite2D" parent="Ground" index="18"]
+position = Vector2(-1308, -3933)
+rotation = -0.999089
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss16" type="Sprite2D" parent="Ground" index="19"]
+position = Vector2(4055, 4168)
+rotation = -0.999089
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss17" type="Sprite2D" parent="Ground" index="20"]
+position = Vector2(-6965, 480)
+rotation = -0.999089
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss18" type="Sprite2D" parent="Ground" index="21"]
+position = Vector2(7675, -2326)
+rotation = -0.999089
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss19" type="Sprite2D" parent="Ground" index="22"]
+position = Vector2(-6331, -3819)
+rotation = -0.999089
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss20" type="Sprite2D" parent="Ground" index="23"]
+position = Vector2(-425, 4598)
+rotation = -0.999089
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss21" type="Sprite2D" parent="Ground" index="24"]
+position = Vector2(-5901, -1783)
+rotation = 0.00362039
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss22" type="Sprite2D" parent="Ground" index="25"]
+position = Vector2(-1579, -3978)
+rotation = 0.00362039
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss23" type="Sprite2D" parent="Ground" index="26"]
+position = Vector2(6341, -3933)
+rotation = 0.00362039
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss24" type="Sprite2D" parent="Ground" index="27"]
+position = Vector2(-1420, 2833)
+rotation = 0.00362039
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss25" type="Sprite2D" parent="Ground" index="28"]
+position = Vector2(368, 4010)
+rotation = 0.00362039
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss26" type="Sprite2D" parent="Ground" index="29"]
+position = Vector2(7428, -1036)
+rotation = 0.00362039
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss27" type="Sprite2D" parent="Ground" index="30"]
+position = Vector2(-6918, 322)
+rotation = 0.00362039
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss28" type="Sprite2D" parent="Ground" index="31"]
+position = Vector2(-6941, 2879)
+rotation = 0.00362039
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss29" type="Sprite2D" parent="Ground" index="32"]
+position = Vector2(1748, -3389)
+rotation = 0.00362039
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="Moss5" type="Sprite2D" parent="Ground" index="33"]
+position = Vector2(-956, 773)
+scale = Vector2(0.707865, 1.40659)
+texture = ExtResource("8_ja45p")
+
+[node name="TileMap" parent="Ground" index="34"]
+tile_set = SubResource("TileSet_q3p01")
+layer_0/name = "Soil"
+layer_0/tile_data = PackedInt32Array(65540, 65541, 1, 131075, 5, 1, 131076, 65541, 2, 131077, 65541, 1, 3, 5, 0, 65539, 5, 1, 65541, 65541, 1, 5, 65541, 1, -196604, 65541, 2, -196605, 65541, 2, -196606, 65541, 2, -196603, 65541, 2, -196607, 5, 2, -262143, 5, 1, -327679, 5, 1, -393215, 5, 1, -458751, 5, 0, -458750, 65541, 0, -458749, 65541, 0, -458748, 65541, 0, -458747, 65541, 0, -458746, 65541, 0, -458745, 65541, 0, -458744, 65541, 0, -458743, 65541, 0, -458742, 65541, 0, -458741, 65541, 0, -458740, 65541, 0, -458739, 131077, 0, -393203, 131077, 1, -327667, 131077, 1, -262131, 131077, 1, -196595, 131077, 1, -131059, 131077, 1, -65523, 131077, 1, -65524, 131077, 1, 12, 131077, 1, 65548, 131077, 1, 65549, 131077, 1, 13, 131077, 1, 131085, 131077, 1, 196621, 131077, 2, 196620, 65541, 2, 196619, 65541, 2, 196618, 65541, 2, 196617, 65541, 2, 196616, 65541, 2, 196615, 65541, 2, 196614, 65541, 2, 196613, 65541, 2, 196612, 65541, 2, 196611, 5, 2, -131067, 5, 1, -65531, 5, 1, -65527, 65541, 1, -131063, 65541, 1, -196599, 65541, 1, -262135, 65541, 1, -327671, 65541, 1, -393207, 65541, 1, -393208, 65541, 1, -393209, 65541, 1, -393210, 65541, 1, -393211, 65541, 1, -393212, 65541, 1, -393213, 65541, 1, -393214, 65541, 1, -327678, 65541, 1, -262142, 65541, 1, -262141, 65541, 1, -327677, 65541, 1, -327676, 65541, 1, -262140, 65541, 1, -262139, 65541, 1, -327675, 65541, 1, -327674, 65541, 1, -262138, 65541, 1, -196602, 65541, 1, -131066, 65541, 1, -65530, 65541, 1, 6, 65541, 1, 65542, 65541, 1, 131078, 65541, 1, 131079, 65541, 1, 65543, 65541, 1, 7, 65541, 1, -65529, 65541, 1, -131065, 65541, 1, -196601, 65541, 1, -262137, 65541, 1, -327673, 65541, 1, -327672, 65541, 1, -262136, 65541, 1, -196600, 65541, 1, -131064, 65541, 1, -65528, 65541, 1, 8, 65541, 1, 65544, 65541, 1, 131080, 65541, 1, 131081, 65541, 1, 65545, 65541, 1, 9, 65541, 1, 10, 65541, 1, -65526, 65541, 1, -131062, 65541, 1, -196598, 65541, 1, -262134, 65541, 1, -327670, 65541, 1, -393206, 65541, 1, -393205, 65541, 1, -327669, 65541, 1, -262133, 65541, 1, -196597, 65541, 1, -131061, 65541, 1, -65525, 65541, 1, 11, 65541, 1, 65547, 65541, 1, 65546, 65541, 1, 131082, 65541, 1, 131083, 65541, 1, 131084, 65541, 1, -131060, 65541, 1, -196596, 65541, 1, -262132, 65541, 1, -327668, 65541, 1, -393204, 65541, 1, 4, 65541, 0)
+layer_1/name = "Walls"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(196605, 65536, 2, 196606, 65536, 0, 196607, 65536, 0, -3, 0, 2, 65533, 0, 2, 131069, 0, 2, -65539, 65536, 1, 131072, 131072, 2, -131067, 0, 1, -65531, 0, 2, 5, 0, 2, 65541, 0, 2, 131077, 131072, 2, 131074, 65536, 0, 131073, 65536, 0, 131075, 65536, 0, -131068, 65536, 0, 65534, 65536, 0, -786440, 65536, 0, -786439, 65536, 0, -786438, 65536, 0, -786437, 65536, 0, -786436, 65536, 0, -786435, 65536, 0, -786434, 65536, 0, -786433, 65536, 0, -851968, 65536, 0, -851967, 65536, 0, -851966, 65536, 0, -851965, 65536, 0, -851964, 65536, 0, -851963, 65536, 0, -851962, 65536, 0, -851961, 65536, 0, -851960, 65536, 0, -851959, 65536, 0, -851958, 65536, 0, -851956, 65536, 0, -851955, 65536, 0, -851954, 65536, 0, -851953, 65536, 0, -851952, 65536, 0, -851951, 65536, 0, -851950, 65536, 0, -851949, 65536, 0, -851948, 65536, 0, -851947, 65536, 0, -851946, 131072, 1, -786410, 0, 2, -720874, 0, 2, -655338, 0, 2, -589802, 0, 2, -524266, 0, 2, -458730, 0, 2, -393194, 0, 2, -327658, 0, 2, -262122, 0, 2, -196586, 0, 2, -131050, 0, 2, -65514, 0, 2, 22, 0, 2, 65558, 0, 2, 131094, 0, 2, 196630, 0, 2, 262166, 0, 2, 327702, 0, 2, 393238, 0, 2, 458774, 0, 2, 524310, 0, 2, 589846, 0, 2, 655382, 0, 2, 720918, 0, 2, 786454, 0, 2, 851990, 131072, 2, 851989, 65536, 0, 851988, 65536, 0, 851987, 65536, 0, 851986, 65536, 0, 851985, 65536, 0, 851984, 65536, 0, 851983, 65536, 0, 851982, 65536, 0, 851981, 65536, 0, 851980, 65536, 0, 851979, 65536, 0, 851978, 65536, 0, 851977, 65536, 0, 851976, 65536, 0, 851975, 65536, 0, 851972, 65536, 0, 851971, 65536, 0, 851970, 65536, 0, 851969, 65536, 0, 851968, 65536, 0, 917503, 65536, 0, 917502, 65536, 0, 917501, 65536, 0, 917500, 65536, 0, 917499, 65536, 0, 917498, 65536, 0, 917497, 65536, 0, 917496, 65536, 0, 917495, 65536, 0, 917494, 65536, 0, 917493, 65536, 0, 917492, 65536, 0, 917491, 65536, 0, 917490, 65536, 0, 917489, 65536, 0, 917488, 65536, 0, 917487, 65536, 0, 917486, 65536, 0, 917485, 65536, 0, 917484, 65536, 0, 917483, 65536, 2, 851947, 0, 2, 786411, 0, 2, 720875, 0, 2, 655339, 0, 2, 589803, 0, 2, 524267, 0, 2, 458731, 0, 2, 393195, 0, 2, 327659, 0, 2, 262123, 0, 2, 196587, 0, 2, 131051, 0, 2, 65515, 0, 2, -21, 0, 2, -65557, 0, 2, -131093, 0, 2, -851957, 65536, 0, -786452, 65536, 0, -786451, 65536, 0, -786450, 65536, 0, -786449, 65536, 0, -786448, 65536, 0, -786447, 65536, 0, -786446, 65536, 0, -786445, 65536, 0, -786444, 65536, 0, -786443, 65536, 0, -786442, 65536, 0, -786441, 65536, 0, -196629, 0, 2, -262165, 0, 2, -327701, 0, 2, -393237, 0, 2, -458773, 0, 2, -524309, 0, 2, -589845, 0, 2, -655381, 0, 2, -720917, 0, 2, -786453, 65536, 1, -458740, 0, 2, -393204, 0, 2, -327668, 0, 2, -262132, 0, 2, -196596, 0, 2, -131060, 0, 2, -65524, 0, 2, 12, 0, 2, 65548, 0, 2, 131084, 0, 2, 196620, 0, 2, 524286, 0, 1, 589822, 0, 2, 655358, 0, 2, 720894, 0, 2, 851966, 0, 2, 458769, 131072, 1, 524305, 0, 2, 589841, 0, 2, 655377, 0, 2, 720913, 0, 2, 786449, 0, 3, -720911, 0, 1, -655375, 0, 2, -589839, 0, 2, -524303, 0, 2, -458767, 0, 2, -393231, 0, 2, -327695, 0, 2, -262159, 131072, 2, -262160, 65536, 0, -262161, 65536, 0, -262162, 65536, 0, -262163, 0, 0, 458768, 65536, 0, 458767, 65536, 0, 458766, 65536, 0, 458765, 65536, 0, 458764, 65536, 0, 458763, 65536, 0, 458762, 65536, 0, 458761, 65536, 0, 458760, 65536, 0, 458759, 65536, 0, 458758, 65536, 0, 458757, 65536, 0, 458756, 65536, 0, 458755, 65536, 0, 458754, 65536, 0, -524276, 65536, 1, -524275, 65536, 0, -524274, 65536, 0, -524273, 65536, 0, -524272, 65536, 0, -524271, 65536, 0, -524270, 65536, 0, -524269, 65536, 0, -524268, 65536, 0, -524267, 65536, 0, 655347, 65536, 0, 655346, 65536, 0, 655345, 65536, 0, 655344, 65536, 0, 655343, 65536, 0, 458753, 0, 0, 786430, 0, 2, 851973, 65536, 0, 851974, 65536, 0, 262156, 0, 3, -262127, 0, 2, -196591, 0, 2, -131055, 0, 2, 196625, 0, 2, 131089, 0, 2, 65553, 0, 2, 17, 0, 2, -65519, 0, 2, 327699, 0, 2, 393235, 0, 2, 458771, 0, 2, 524307, 0, 2, 589843, 0, 2, 655379, 0, 2, 262163, 131072, 1, 262161, 65536, 2, 262162, 65536, 0, -327663, 0, 1, 720915, 0, 3, 655342, 0, 0, 655355, 131072, 0, 655354, 65536, 0, 655353, 65536, 0, 655352, 65536, 0, 655351, 65536, 0, 589812, 65536, 0, 655348, 65536, 0, 655349, 65536, 0, 655350, 65536, 0, -524291, 65536, 0, -524290, 65536, 0, -524289, 65536, 0, -589824, 65536, 0, -589823, 65536, 0, -589822, 65536, 0, -589821, 65536, 0, -589820, 65536, 0, -589819, 65536, 0, -589815, 65536, 0, -589816, 65536, 0, -589817, 65536, 0, -589818, 65536, 0, -589814, 131072, 0, -524292, 0, 0)
+
+[node name="Moss6" type="Sprite2D" parent="Ground" index="35"]
+position = Vector2(1854, -71)
+rotation = -1.67726
+scale = Vector2(0.906863, 0.906863)
+texture = ExtResource("7_l4djq")
+
+[node name="SteamVent" parent="Ground" index="36" instance=ExtResource("12_xqcwd")]
+position = Vector2(1023, -457)
+
+[node name="SteamVent2" parent="Ground" index="37" instance=ExtResource("12_xqcwd")]
+position = Vector2(7854, 1179)
+
+[node name="SteamVent3" parent="Ground" index="38" instance=ExtResource("12_xqcwd")]
+position = Vector2(4924, -2474)
+
+[node name="SteamVent4" parent="Ground" index="39" instance=ExtResource("12_xqcwd")]
+position = Vector2(-4609, 4167)
+
+[node name="SteamVent5" parent="Ground" index="40" instance=ExtResource("12_xqcwd")]
+position = Vector2(-5770, -2245)
+
+[node name="SteamVent6" parent="Ground" index="41" instance=ExtResource("12_xqcwd")]
+position = Vector2(-2440, -437)
+
+[node name="SteamVent7" parent="Ground" index="42" instance=ExtResource("12_xqcwd")]
+position = Vector2(3439, 4339)
+
+[node name="SteamVent8" parent="Ground" index="43" instance=ExtResource("12_xqcwd")]
+position = Vector2(4942, 2474)
+
+[node name="SteamVent9" parent="Ground" index="44" instance=ExtResource("12_xqcwd")]
+position = Vector2(-2398, -3774)
+
+[node name="House" parent="." index="2" instance=ExtResource("14_j0vma")]
+position = Vector2(-5189, 919)
+rotation = -0.794125
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Gate" parent="." index="4" instance=ExtResource("2_7ymba")]
+position = Vector2(-94, -880)
+
+[node name="Level Color" parent="." index="7"]
+color = Color(1, 1, 0.137255, 1)
+
+[node name="Scout" parent="Enemies" index="0" instance=ExtResource("14_50nlp")]
+position = Vector2(1493, 187)
+
+[node name="Bug" parent="Enemies" index="1" instance=ExtResource("15_fi21m")]
+position = Vector2(-611, 566)
+script = null
+
+[node name="Drone" parent="Enemies" index="2" instance=ExtResource("16_5wssw")]
+position = Vector2(950, 1126)
+
+[node name="Hunter" parent="Enemies" index="3" instance=ExtResource("18_uywi4")]
+position = Vector2(1531, 1483)
+
+[node name="CarPath" type="Path2D" parent="." index="11"]
+curve = SubResource("Curve2D_nmw4d")
+
+[node name="Car" parent="CarPath" index="0" instance=ExtResource("17_wi3x1")]
+position = Vector2(1324, -2026)
+rotation = 1.52205
+progress = 30255.8
+
+[node name="LevelBarriers" type="Node2D" parent="." index="12"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LevelBarriers" index="0"]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelBarriers/StaticBody2D" index="0"]
+position = Vector2(-716, -4953)
+shape = SubResource("RectangleShape2D_hiqsp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LevelBarriers/StaticBody2D" index="1"]
+position = Vector2(-757, 5445)
+shape = SubResource("RectangleShape2D_hiqsp")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="LevelBarriers/StaticBody2D" index="2"]
+position = Vector2(-9091, -1599)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_hiqsp")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="LevelBarriers/StaticBody2D" index="3"]
+position = Vector2(7521, -1218)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_hiqsp")
+
+[node name="Box" parent="." index="13" instance=ExtResource("18_sipbj")]
+position = Vector2(-844, -698)
+
+[node name="Box2" parent="." index="14" instance=ExtResource("18_sipbj")]
+position = Vector2(-450, -546)
+rotation = 0.765534
+
+[node name="Box3" parent="." index="15" instance=ExtResource("18_sipbj")]
+position = Vector2(5747, 1994)
+rotation = 0.765534
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="16"]
+navigation_polygon = SubResource("NavigationPolygon_bssnu")
+
+[connection signal="player_entered" from="House" to="." method="_on_house_player_entered"]
+[connection signal="player_exited" from="House" to="." method="_on_house_player_exited"]
+[connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
