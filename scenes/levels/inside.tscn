@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bw66j870pd7t"]
+[gd_scene load_steps=30 format=3 uid="uid://bw66j870pd7t"]
 
 [ext_resource type="PackedScene" uid="uid://drl4stwc13lfl" path="res://scenes/levels/level.tscn" id="1_50klb"]
 [ext_resource type="Texture2D" uid="uid://cn8e86ttuwrj3" path="res://graphics/ground/dirt.png" id="2_grjgj"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://cp70qk7euh2p6" path="res://graphics/objects/infestation/small_4.png" id="19_andki"]
 [ext_resource type="Texture2D" uid="uid://c8smlg8lb1cq7" path="res://graphics/objects/infestation/spikes.png" id="20_m7q58"]
 [ext_resource type="PackedScene" uid="uid://b1c7ap0tsulvy" path="res://scenes/enemies/drone.tscn" id="26_e1h34"]
+[ext_resource type="PackedScene" uid="uid://b4ax8m1r56xje" path="res://scenes/enemies/sniper.tscn" id="27_nq5b1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8jcjq"]
 size = Vector2(342, 734)
@@ -526,5 +527,17 @@ occluder = SubResource("OccluderPolygon2D_e2hqf")
 
 [node name="Drone" parent="Enemies" index="0" instance=ExtResource("26_e1h34")]
 position = Vector2(-5001, 950)
+
+[node name="Sniper" parent="Enemies" index="1" instance=ExtResource("27_nq5b1")]
+position = Vector2(-1367, 393)
+
+[node name="Sniper2" parent="Enemies" index="2" instance=ExtResource("27_nq5b1")]
+position = Vector2(-3271, 345)
+
+[node name="Sniper3" parent="Enemies" index="3" instance=ExtResource("27_nq5b1")]
+position = Vector2(-2191, 1201)
+
+[node name="Sniper4" parent="Enemies" index="4" instance=ExtResource("27_nq5b1")]
+position = Vector2(121, 1281)
 
 [connection signal="body_entered" from="Transition Area" to="." method="_on_transition_area_body_entered"]

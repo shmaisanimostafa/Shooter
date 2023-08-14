@@ -2,7 +2,7 @@
 
 This project is done while learning Game Development in Godot
 
-![Screenshot1](./Github%20Repo%20Images/Screenshot%202023-08-06%20122658.png)
-![Screenshot2](./Github%20Repo%20Images/Screenshot%202023-08-06%20122627.png)
-![Screenshot3](./Github%20Repo%20Images/Screenshot%202023-08-06%20122455.png)
-![Screenshot4](./Github%20Repo%20Images/Screenshot%202023-08-06%20122442.png)
+![Screenshot1](./Screenshots/1.png)
+![Screenshot2](./Screenshots/2.png)
+![Screenshot3](./Screenshots/3.png)
+![Screenshot4](./Screenshots/4.png)
