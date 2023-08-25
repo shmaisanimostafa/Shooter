@@ -5,6 +5,9 @@ var player_vulnerable : bool = true
 signal stat_change
 
 var player_hit_sound : AudioStreamPlayer2D 
+var enemies_count = 1
+var scouts_amount = 1
+var drones_amount = 1
 
 var laser_amount = 20:
 	set(value):

@@ -1,0 +1,2 @@
+﻿65307
+C:/Godot_v4.0.3-stable_mono_win64/Godot_v4.0.3-stable_mono_win64.exe

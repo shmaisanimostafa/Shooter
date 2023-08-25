@@ -32,7 +32,7 @@ func _on_hit_cooldown_timeout():
 
 func hit():
 	if vulnerable == true:
-		health -= 15
+		health -= 50
 		$Timers/HitCooldown.start()
 		$AudioStreamPlayer2D.play()
 		$Sprite2D.material.set_shader_parameter("progress", 1)

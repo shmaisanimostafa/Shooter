@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b82wdbngvdujs"]
+[gd_scene load_steps=25 format=3 uid="uid://b82wdbngvdujs"]
 
 [ext_resource type="PackedScene" uid="uid://drl4stwc13lfl" path="res://scenes/levels/level.tscn" id="1_mcw5h"]
 [ext_resource type="PackedScene" uid="uid://dtkghhrnlofqb" path="res://scenes/objects/gate.tscn" id="2_7ymba"]
@@ -15,11 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://8piv7ee54r2s" path="res://scenes/objects/steam_vent.tscn" id="12_xqcwd"]
 [ext_resource type="PackedScene" uid="uid://doinb8khk5dbv" path="res://scenes/enemies/scout.tscn" id="14_50nlp"]
 [ext_resource type="PackedScene" uid="uid://br671s6dbmdfu" path="res://scenes/houses/house.tscn" id="14_j0vma"]
-[ext_resource type="PackedScene" uid="uid://cysd14ce8fg8i" path="res://scenes/enemies/bug.tscn" id="15_fi21m"]
 [ext_resource type="PackedScene" uid="uid://b1c7ap0tsulvy" path="res://scenes/enemies/drone.tscn" id="16_5wssw"]
 [ext_resource type="PackedScene" uid="uid://han13f0vhrbr" path="res://scenes/enemies/car.tscn" id="17_wi3x1"]
 [ext_resource type="PackedScene" uid="uid://dwwvgogdnk50a" path="res://scenes/container/box.tscn" id="18_sipbj"]
-[ext_resource type="PackedScene" uid="uid://t2qfisw2g7gk" path="res://scenes/enemies/hunter.tscn" id="18_uywi4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gagh5"]
 resource_name = "Walls"
@@ -377,7 +375,7 @@ position = Vector2(4942, 2474)
 position = Vector2(-2398, -3774)
 
 [node name="House" parent="." index="2" instance=ExtResource("14_j0vma")]
-position = Vector2(-5573, 344)
+position = Vector2(-5461, 360)
 rotation = -0.794125
 metadata/_edit_group_ = true
 
@@ -387,18 +385,119 @@ position = Vector2(-94, -880)
 [node name="Level Color" parent="." index="7"]
 color = Color(1, 1, 0.137255, 1)
 
+[node name="Camera2D" parent="Player" index="7"]
+zoom = Vector2(0.4, 0.4)
+
 [node name="Scout" parent="Enemies" index="0" instance=ExtResource("14_50nlp")]
 position = Vector2(1493, 187)
 
-[node name="Bug" parent="Enemies" index="1" instance=ExtResource("15_fi21m")]
-position = Vector2(-611, 566)
-script = null
+[node name="Scout2" parent="Enemies" index="1" instance=ExtResource("14_50nlp")]
+position = Vector2(-3568, -2876)
 
-[node name="Drone" parent="Enemies" index="2" instance=ExtResource("16_5wssw")]
-position = Vector2(950, 1126)
+[node name="Scout3" parent="Enemies" index="2" instance=ExtResource("14_50nlp")]
+position = Vector2(-5166, -1373)
 
-[node name="Hunter" parent="Enemies" index="3" instance=ExtResource("18_uywi4")]
-position = Vector2(4283, 2291)
+[node name="Scout4" parent="Enemies" index="3" instance=ExtResource("14_50nlp")]
+position = Vector2(-5756, -745)
+
+[node name="Scout5" parent="Enemies" index="4" instance=ExtResource("14_50nlp")]
+position = Vector2(-7164, 568)
+
+[node name="Scout6" parent="Enemies" index="5" instance=ExtResource("14_50nlp")]
+position = Vector2(-6460, 1538)
+
+[node name="Scout7" parent="Enemies" index="6" instance=ExtResource("14_50nlp")]
+position = Vector2(-5413, 2432)
+
+[node name="Scout8" parent="Enemies" index="7" instance=ExtResource("14_50nlp")]
+position = Vector2(-4975, 1176)
+
+[node name="Scout9" parent="Enemies" index="8" instance=ExtResource("14_50nlp")]
+position = Vector2(-4081, 339)
+
+[node name="Scout10" parent="Enemies" index="9" instance=ExtResource("14_50nlp")]
+position = Vector2(-2958, -517)
+
+[node name="Scout11" parent="Enemies" index="10" instance=ExtResource("14_50nlp")]
+position = Vector2(-3890, -650)
+
+[node name="Scout12" parent="Enemies" index="11" instance=ExtResource("14_50nlp")]
+position = Vector2(-2120, -1164)
+
+[node name="Scout13" parent="Enemies" index="12" instance=ExtResource("14_50nlp")]
+position = Vector2(-2938, -2020)
+
+[node name="Scout14" parent="Enemies" index="13" instance=ExtResource("14_50nlp")]
+position = Vector2(-4327, -1278)
+
+[node name="Scout15" parent="Enemies" index="14" instance=ExtResource("14_50nlp")]
+position = Vector2(-5145, -536)
+
+[node name="Scout16" parent="Enemies" index="15" instance=ExtResource("14_50nlp")]
+position = Vector2(-6020, 282)
+
+[node name="Scout17" parent="Enemies" index="16" instance=ExtResource("14_50nlp")]
+position = Vector2(-2519, 3935)
+
+[node name="Scout18" parent="Enemies" index="17" instance=ExtResource("14_50nlp")]
+position = Vector2(-8227, 4639)
+
+[node name="Scout19" parent="Enemies" index="18" instance=ExtResource("14_50nlp")]
+position = Vector2(-6895, -1830)
+
+[node name="Scout20" parent="Enemies" index="19" instance=ExtResource("14_50nlp")]
+position = Vector2(-8132, -3581)
+
+[node name="Scout21" parent="Enemies" index="20" instance=ExtResource("14_50nlp")]
+position = Vector2(4274, -860)
+
+[node name="Scout22" parent="Enemies" index="21" instance=ExtResource("14_50nlp")]
+position = Vector2(5682, 4334)
+
+[node name="Scout23" parent="Enemies" index="22" instance=ExtResource("14_50nlp")]
+position = Vector2(5035, 2222)
+
+[node name="Scout24" parent="Enemies" index="23" instance=ExtResource("14_50nlp")]
+position = Vector2(6405, -1888)
+
+[node name="Scout25" parent="Enemies" index="24" instance=ExtResource("14_50nlp")]
+position = Vector2(6005, 186)
+
+[node name="Scout26" parent="Enemies" index="25" instance=ExtResource("14_50nlp")]
+position = Vector2(6424, 2660)
+
+[node name="Scout27" parent="Enemies" index="26" instance=ExtResource("14_50nlp")]
+position = Vector2(4883, -3010)
+
+[node name="Drone" parent="Enemies" index="27" instance=ExtResource("16_5wssw")]
+position = Vector2(2824, 3485)
+
+[node name="Drone2" parent="Enemies" index="28" instance=ExtResource("16_5wssw")]
+position = Vector2(2653, -1063)
+
+[node name="Drone3" parent="Enemies" index="29" instance=ExtResource("16_5wssw")]
+position = Vector2(-2580, 2115)
+
+[node name="Drone4" parent="Enemies" index="30" instance=ExtResource("16_5wssw")]
+position = Vector2(-925, -2318)
+
+[node name="Drone5" parent="Enemies" index="31" instance=ExtResource("16_5wssw")]
+position = Vector2(2839, -3972)
+
+[node name="Drone6" parent="Enemies" index="32" instance=ExtResource("16_5wssw")]
+position = Vector2(-2795, -3876)
+
+[node name="Drone7" parent="Enemies" index="33" instance=ExtResource("16_5wssw")]
+position = Vector2(-5552, -3924)
+
+[node name="Drone8" parent="Enemies" index="34" instance=ExtResource("16_5wssw")]
+position = Vector2(4205, 511)
+
+[node name="Drone9" parent="Enemies" index="35" instance=ExtResource("16_5wssw")]
+position = Vector2(-3418, -1311)
+
+[node name="Drone10" parent="Enemies" index="36" instance=ExtResource("16_5wssw")]
+position = Vector2(-5839, 1062)
 
 [node name="CarPath" type="Path2D" parent="." index="11"]
 curve = SubResource("Curve2D_nmw4d")
@@ -431,18 +530,47 @@ position = Vector2(7521, -1218)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_hiqsp")
 
-[node name="Box" parent="." index="13" instance=ExtResource("18_sipbj")]
-position = Vector2(-844, -698)
+[node name="Box" parent="LevelBarriers" index="1" instance=ExtResource("18_sipbj")]
+position = Vector2(-1275, -581)
 
-[node name="Box2" parent="." index="14" instance=ExtResource("18_sipbj")]
+[node name="Box2" parent="LevelBarriers" index="2" instance=ExtResource("18_sipbj")]
 position = Vector2(-450, -546)
 rotation = 0.765534
 
-[node name="Box3" parent="." index="15" instance=ExtResource("18_sipbj")]
+[node name="Box3" parent="LevelBarriers" index="3" instance=ExtResource("18_sipbj")]
 position = Vector2(5747, 1994)
 rotation = 0.765534
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="16"]
+[node name="Box4" parent="LevelBarriers" index="4" instance=ExtResource("18_sipbj")]
+position = Vector2(4999, 3126)
+rotation = 0.765534
+
+[node name="Box5" parent="LevelBarriers" index="5" instance=ExtResource("18_sipbj")]
+position = Vector2(-4142, 3435)
+rotation = 3.16269
+
+[node name="Box6" parent="LevelBarriers" index="6" instance=ExtResource("18_sipbj")]
+position = Vector2(1379, 2688)
+rotation = 3.16269
+
+[node name="Box7" parent="LevelBarriers" index="7" instance=ExtResource("18_sipbj")]
+position = Vector2(-6258, 3412)
+rotation = 3.16269
+
+[node name="Box8" parent="LevelBarriers" index="8" instance=ExtResource("18_sipbj")]
+position = Vector2(-6020, 4849)
+rotation = 3.16269
+
+[node name="Box9" parent="LevelBarriers" index="9" instance=ExtResource("18_sipbj")]
+position = Vector2(-4170, 1329)
+rotation = 2.35805
+
+[node name="Box10" parent="LevelBarriers" index="10" instance=ExtResource("18_sipbj")]
+position = Vector2(-2518, -449)
+rotation = 2.35805
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="13"]
+visible = false
 position = Vector2(830, 358)
 navigation_polygon = SubResource("NavigationPolygon_bssnu")
 metadata/_edit_lock_ = true

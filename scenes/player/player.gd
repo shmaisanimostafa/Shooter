@@ -1,13 +1,18 @@
 extends CharacterBody2D
 
-var can_laser: bool = true
-var can_grenade: bool = true
-@export var max_speed: int = 500
-var speed: int = max_speed
 
 signal laser(pos, direction)
 signal grenade(pos, direction)
-#signal update_status
+
+
+var can_laser: bool = true
+var can_grenade: bool = true
+
+@export var max_speed: int = 500
+
+var speed: int = max_speed
+
+
 
 func _process(_delta):
 	# movement input
@@ -40,11 +45,15 @@ func _process(_delta):
 		can_grenade = false
 		$GrenadeReloadTimer.start()
 		grenade.emit(selected_grenade, player_direction)
-		
-# When timer ends
+
+
 func _on_timer_timeout():
 	can_laser = true
+
+
 func _on_timer_2_timeout():
 	can_grenade = true
+
+
 func hit():
 	Globals.health -= 1

@@ -107,7 +107,7 @@ _data = {
 "RESET": SubResource("Animation_2iptq")
 }
 
-[node name="Drone" type="CharacterBody2D" groups=["Entity"]]
+[node name="Drone" type="CharacterBody2D" groups=["Drones", "Entity"]]
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 collision_mask = 15

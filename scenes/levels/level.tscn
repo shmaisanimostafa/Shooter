@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://drl4stwc13lfl"]
+[gd_scene load_steps=5 format=3 uid="uid://drl4stwc13lfl"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_devmk"]
+[ext_resource type="PackedScene" uid="uid://cxdc3f7g3jbq6" path="res://scenes/user_interface/end_screen.tscn" id="2_oarxs"]
 [ext_resource type="PackedScene" uid="uid://bs8ok22j5w5g0" path="res://scenes/user_interface/ui.tscn" id="3_uxrh7"]
 [ext_resource type="PackedScene" uid="uid://dvncjkf8rmjb0" path="res://scenes/player/player.tscn" id="4_1n5mw"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_devmk")
+end_screen = ExtResource("2_oarxs")
 
 [node name="Decals" type="Node2D" parent="."]
 
